@@ -87,6 +87,12 @@ void test::runTests()
   else{
     cout << "isEmpty returns false on a list with values: Failed\n";
   }
+  if (test14() == true){
+		cout << "size of list returns proper number: Passed\n";
+	}
+  else{
+    cout << "size of list returns proper number: Failed\n";
+  }
 }
 
 bool test::test1(){
@@ -306,6 +312,21 @@ bool test::test13(){
   m_ll->addFront(2);
   m_ll->addFront(1);
   if(m_ll->isEmpty() == false){
+    delete m_ll;
+    return true;
+  }
+  else{
+    delete m_ll;
+    return false;
+  }
+}
+
+bool test::test14(){
+  LinkedListOfInts* m_ll = new LinkedListOfInts;
+  m_ll->addFront(3);
+  m_ll->addFront(2);
+  m_ll->addFront(1);
+  if(m_ll->size() == 3){
     delete m_ll;
     return true;
   }
