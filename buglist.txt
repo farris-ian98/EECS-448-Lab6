@@ -1,0 +1,5 @@
+Bug list in LinkedListOfInts
+1: addBack adds the element but to the front of the list
+2: removeFront does not remove the front element or decrement the list
+3: removeBack does not remove the back element or decrement the list
+4: isEmpty returns true even when the list is not empty
